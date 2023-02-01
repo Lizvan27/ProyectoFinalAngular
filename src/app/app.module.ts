@@ -11,6 +11,7 @@ import { initializeApp, provideFirebaseApp  } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ComponentsModule } from './components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 
 var config ={
@@ -30,6 +31,7 @@ var config ={
     PagesModule,
     ComponentsModule,
     BrowserAnimationsModule,
+    RouterModule,
 
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

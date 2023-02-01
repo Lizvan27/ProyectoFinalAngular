@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { ProductosComponent } from './productos/productos.component';
 import { ProductosDetallesComponent } from './productos-detalles/productos-detalles.component';
 
@@ -12,18 +12,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CantiProductComponent } from './canti-product/canti-product.component';
+import { CarruselProductComponent } from './carrusel-product/carrusel-product.component';
+import { AgregarProductComponent } from './agregar-product/agregar-product.component';
+
+
 @NgModule({
   declarations: [
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
     ProductosComponent,
-    ProductosDetallesComponent
+    ProductosDetallesComponent,
+    CantiProductComponent,
+    CarruselProductComponent,
+    AgregarProductComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
     RouterLink,
     RouterLinkActive,
 
@@ -36,7 +45,9 @@ import { MatDialogModule } from '@angular/material/dialog';
   exports: [
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductosComponent,
+    ProductosDetallesComponent
   ]
 })
 export class ComponentsModule { }
