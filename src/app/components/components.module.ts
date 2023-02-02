@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CantiProductComponent } from './canti-product/canti-product.component';
 import { CarruselProductComponent } from './carrusel-product/carrusel-product.component';
 import { AgregarProductComponent } from './agregar-product/agregar-product.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AgregarProductComponent } from './agregar-product/agregar-product.compo
     ProductosDetallesComponent,
     CantiProductComponent,
     CarruselProductComponent,
-    AgregarProductComponent
+    AgregarProductComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,11 @@ import { AgregarProductComponent } from './agregar-product/agregar-product.compo
     LoginComponent,
     RegisterComponent,
     ProductosComponent,
-    ProductosDetallesComponent
+    ProductosDetallesComponent,
+    CantiProductComponent,
+    CarruselProductComponent,
+    AgregarProductComponent,
+    LogoutComponent
   ]
 })
 export class ComponentsModule { }

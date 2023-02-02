@@ -16,12 +16,17 @@ export class AgregarProductComponent {
 
  @ViewChild(MatTable) tabla1!: MatTable<Producto>;
 
+ borrarFila(nombre: number) {
+  if (confirm("Realmente quiere borrarlo?")) {
+    this.datos.splice(nombre, 1);
+    this.tabla1.renderRows();
+  }
+ }  
 
  agregar(){
   this.datos.push(new Producto(this.ProductoSelect.nombre, this.ProductoSelect.descripcion, this.ProductoSelect.precio, this.ProductoSelect.stock));
   this.tabla1.renderRows();
   this.ProductoSelect = new Producto('','',0,0);
-
  }
 }
 export class Producto {

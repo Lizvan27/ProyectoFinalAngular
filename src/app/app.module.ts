@@ -13,6 +13,11 @@ import { ComponentsModule } from './components/components.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { EnvironmentProducts } from 'src/environments/environment-products';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 var config ={
   apiKey: environment.firebase.apiKey,
@@ -32,6 +37,11 @@ var config ={
     ComponentsModule,
     BrowserAnimationsModule,
     RouterModule,
+    
+    AngularFireModule.initializeApp(EnvironmentProducts.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
+    
 
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

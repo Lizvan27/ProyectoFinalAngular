@@ -8,7 +8,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { ProductosDetallesComponent } from './components/productos-detalles/productos-detalles.component';
 
 const routes: Routes = [
-  {path: '', component:HomeComponent, canActivate:[LoginComponent]},
+  {path: '', component:HomeComponent}, /**canActivate:[LoginComponent] */
   {path: 'productos', component:ProductosComponent,
     /*children: [
       {path:'detalleProduct', component:ProductosDetallesComponent}
